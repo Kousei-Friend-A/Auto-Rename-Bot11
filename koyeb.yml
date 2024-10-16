@@ -1,0 +1,25 @@
+services:
+  - type: web
+    plan: free
+    name: Anime-Schedule-Bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    repo:
+      # Replace with your GitHub repository URL
+      url: https://github.com/Kousei-Friend-A/Auto-Rename-Bot11
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: MAIN_CHANNEL
+        sync: false
+      - key: TIMEZONE
+        sync: false
+      - key: SUDO_USERS
+        sync: false
